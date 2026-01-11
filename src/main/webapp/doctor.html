@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors | Hospital Website</title>
+  <link rel="stylesheet" href="styles/doctor.css">
+  <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+  <div class="header">
+      <div class="left-section">
+        HealthCare+
+      </div>
+      <div class="middle-section">
+        <a href="index.html" class="Home">
+          Home
+        </a>
+        <a href="about_page.html" class="About">
+          About
+        </a>
+        <a href="service.html" class="Services">
+          Services
+        </a>
+        <a href="doctor.html" class="Doctors">
+          Doctors
+        </a>
+        <a href="appointment.html" class="Appointment">
+          Appointment
+        </a>
+        <a href="contact_page.html" class="Contact">
+          Contact
+        </a>
+      </div>
+      <div class="right-section">
+        <a href="login.html" class="login">
+          Login
+        </a>
+        <a href="register.html" class="register">
+          Register
+        </a>
+        <div class="hamburger">
+          <img src="images/hamburger-menu.png" class="hamburger-img">
+        </div>
+        <div class="dropdown-link">
+          <div class="links">
+            <a href="index.html" class="index-drop">Home</a>
+            <a href="about_page.html" class="about-drop">About us</a>
+            <a href="service.html"class="service-drop">Services</a>
+            <a href="doctor.html" class="doctor-drop">Doctor</a>
+            <a href="appointment.html"class="appointment-drop">Appointment</a>
+            <a href="contact_page.html" class="contact-drop">Contact</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <section class="doctors-section">
+    <h2>Meet Our Expert Doctors</h2>
+    <p class="doctors-intro">
+      Our team of board-certified physicians and specialists are dedicated to providing exceptional care with expertise, compassion, and the latest medical knowledge.
+    </p>
+
+    <!-- ✅ Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="doctor-search" placeholder="Search doctor by name or speciality...">
+      <button id="search-btn" class="search-icon">&#128269;</button>
+    </div>
+
+    <div id="doctors-container"></div>
+    <!-- ✅ Bottom Info Rectangles -->
+<div class="info-rectangles">
+
+  <!-- 1st Rectangle: Appointment Guidelines -->
+  <div class="info-card guidelines">
+    <h3>Appointment Guidelines</h3>
+    <ul>
+      <li>Book your appointment at least 24 hours in advance.</li>
+      <li>Carry a valid ID and previous medical records.</li>
+      <li>Arrive 15 minutes before your scheduled time.</li>
+      <li>Follow the hospital's safety and hygiene protocols.</li>
+    </ul>
+  </div>
+
+  <!-- 2nd Rectangle: Address / Need Help -->
+  <div class="info-card contact">
+    <h3>Need Help?</h3>
+    <ul>
+      <li>123 HealthCare Street, City, Country</li>
+      <li>Phone: +91 123 456 7890</li>
+      <li>Email: support@healthcare.com</li>
+    </ul>
+  </div>
+
+</div>
+
+  </section>
+
+  <script>
+    // Fetch and display doctors
+    let doctorsData = [];
+
+    fetch('/HealthCare_backend_servlets/DoctorServlet')
+      .then(response => response.json())
+      .then(data => {
+        doctorsData = data;
+        displayDoctors(data);
+      })
+      .catch(err => console.error(err));
+
+    // Display doctors function
+    function displayDoctors(doctors) {
+      const container = document.getElementById('doctors-container');
+      container.innerHTML = ''; // clear old cards
+
+      doctors.forEach(doctor => {
+        const card = document.createElement('div');
+        card.className = 'doctor-card';
+        card.innerHTML = `
+          <img src="${doctor.image}" alt="${doctor.name}">
+          <h3>${doctor.name}</h3>
+          <p>Specialization: ${doctor.specialization}</p>
+          <p>Experience: ${doctor.experience}</p>
+          <a href="appointment.html">
+            <button class="appointment-btn">Book Appointment</button>
+          </a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Search when icon is clicked
+    document.getElementById('search-btn').addEventListener('click', () => {
+      const searchTerm = document.getElementById('doctor-search').value.toLowerCase();
+      const filtered = doctorsData.filter(doctor =>
+        doctor.name.toLowerCase().includes(searchTerm) ||
+        doctor.specialization.toLowerCase().includes(searchTerm)
+      );
+      displayDoctors(filtered);
+    });
+  </script>
+  <script>
+      // Get current file name (e.g. "about_page.html")
+      const currentPage = window.location.pathname.split("/").pop();
+
+      // Get all nav links
+      const links = document.querySelectorAll(".links a");
+
+      // Loop through and add 'active' to the matching one
+      links.forEach(link => 
+      {
+        if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+        }
+      });
+      hamburger=document.querySelector('.hamburger-img');
+      dropdown=document.querySelector('.links');
+      dropdown2=document.querySelector('.dropdown-link');
+      hamburger.addEventListener('click',() =>
+      {
+        dropdown.classList.toggle('show');
+        dropdown2.classList.toggle('show'); /* classList is a built in function..it has properties like add remove a class..toggle*/
+      });
+
+  </script>
+</body>
+</html>

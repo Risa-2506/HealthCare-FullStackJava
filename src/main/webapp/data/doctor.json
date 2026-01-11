@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Meera Sharma",
+    "specialization": "Cardiologist",
+    "experience": "10 years",
+    "contact": "meera@hospital.com",
+    "image": "images/doc1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Rajesh Kumar",
+    "specialization": "Dermatologist",
+    "experience": "8 years",
+    "contact": "rajesh@hospital.com",
+    "image": "images/doc2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Ananya Desai",
+    "specialization": "Ophthalmologist",
+    "experience": "6 years",
+    "contact": "ananya@hospital.com",
+    "image": "images/doc3.webp"
+  },
+  {
+    "name": "Dr. Karan Patel",
+    "specialization": "Gastroenterology",
+    "experience": "9 years",
+    "image": "images/doc4.webp"
+  },
+  {
+    "name": "Dr. Sneha Reddy",
+    "specialization": "Dermatologist",
+    "experience": "7 years",
+    "image": "images/doc5.webp"
+  },
+  {
+    "name": "Dr. Anil Verma",
+    "specialization": "ENT Specialist",
+    "experience": "11 years",
+    "image": "images/doc6.png"
+  }
+]

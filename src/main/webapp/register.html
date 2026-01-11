@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+            background: linear-gradient(135deg, #c3e0ff, #f0f8ff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .register{
+            background-color: #fff;
+            padding: 40px;
+            margin: 50px auto;
+            width:100%;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-top: 30px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+        }
+        h2{
+            text-align: center;
+            font-weight: 900;
+            margin-top: 40px;
+            font-size:25px ;
+        }
+        .register h2{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            margin-top: 10px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #414040;
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            color: #007BFF;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+         p{
+            font-size: 14px;
+            color: rgb(119, 121, 122);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            text-align: left;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        .pinfo{
+            display: flex;
+            justify-content: space-between;
+            gap:20px;
+            flex-wrap: wrap;  
+        }
+        .pinfo .info{
+            flex:1;
+            min-width:200px;
+            margin-right: 20px;
+            margin-top: 85x;
+        }
+        .cinfo{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        .ainfo{
+            display: flex;
+            flex-direction: column;
+            margin-top:20px ;
+            gap:20px;
+        }
+        .sub_info{
+            display: flex;
+            justify-content: space-between;
+            gap:8px;
+            flex-wrap: wrap;
+        }
+        .acc_secure{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        .einfo {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px; 
+            flex-wrap: wrap;
+        }
+
+        .einfo .info {
+            flex: 1;              
+            min-width: 250px;     
+        }
+        label{
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #414040;
+        }
+        input{
+            font-size: 12px;
+            width:100%;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            padding:12px;
+            background-color: rgb(241, 241, 241);
+            
+        }
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0,123,255,0.3);
+            outline: #007BFF;
+            background-color: #fff;
+        }
+        .cinfo input::placeholder{
+            font-size: 14px;
+            color: rgb(119, 116, 116);
+        }
+        @media (max-width: 600px) {
+            .register {
+                padding: 25px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+        .register > p:last-of-type {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+        .consent {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            gap: 8px;
+            text-align: left;
+        }
+        .consent .info label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 13px;
+            color: #555;
+            margin: 0;
+        }
+         .consent input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: #007BFF;
+        }
+        button{
+            width: 100%;
+            margin-top: 25px;
+            font-size: 17px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #007BFF;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            color: #fff;
+        }
+         button:hover{
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+<body>
+    <h2>HealthCare+</h2>
+    <div class="register">
+        <h2>Create your Account</h2>
+        <p>"Your Health, Our Priority — Register to Begin Your Care Journey."</p>
+        <form method="POST" action="SignUpServlet">
+            <h3>Personal Information</h3>
+            <div class="pinfo">
+                
+                <div class="info">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" required/>
+                    
+                </div>
+                <div class="info">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" required />
+                    
+                </div>
+                <div class="info">
+                    <label>Date of Birth</label>
+                    <input type="date" name="dob" required/>
+                    
+                </div>
+                <div class="info">
+                    <label>Gender</label>
+                    <input type="text" name="gender" required/>
+                    
+                </div>
+                <div class="info">
+                    <label>Blood Group</label>
+                    <input type="text" name="blood_group"/>
+                    
+                </div>
+                <div class="info">
+                    <label>Age</label>
+                    <input type="number" name="age" required/>
+                </div>   
+            </div>
+            <h3>Contact Information</h3>
+            <div class="cinfo">
+                <div class="info">
+                    <label>Email Address</label>
+                    <input type="text" name="email" placeholder="Enter your email address" required/>
+                </div>
+                <div class="info">
+                    <label>Mobile Number</label>
+                    <input type="tel" name="mobile" placeholder="Enter mobile number" maxlength="10" pattern="[0-9]{10}" required/>
+                </div>
+            </div>
+            <h3>Emergency Contact</h3>
+            <div class="einfo">
+                <div class="info">
+                    <label >Emergency Contact Name</label>
+                    <input type="text" name="emergency_contact_name"  />
+                </div>
+                <div class="info">
+                    <label >Emergency Contact Number</label>
+                    <input type="tel" name="emergency_contact_tel" maxlength="10" pattern="[0-9]{10}" />
+                </div>
+
+            </div>
+            <h3>Address Information</h3>
+            <div class="ainfo">
+                <div class="sub_info">
+                    <label>Street Address</label>
+                    <input type="text" name="street_address"/>
+                </div>
+                <div class="sub_info">
+                    <div class="info">
+                        <label>City</label>
+                        <input type="text" name="city"/>
+                    </div>
+                    <div class="info">
+                        <label>State</label>
+                        <input type="text" name="State"/>
+                    </div>
+                    <div class="info">
+                        <label>ZIP Code</label>
+                        <input type="text" name="zipcode"/>
+                    </div>
+                </div>
+
+            </div>
+            <h3>Account Security</h3>
+            <div class="acc_secure">
+                <div class="login">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password must be atleast 8 characters long" required/>
+                </div>
+                
+            </div>
+            <div class="consent">
+                <div class="info">
+                    <label><input type="checkbox" required/>I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+                <div class="info">
+                    <label><input type="checkbox" required/>I consent to the use of my health data for treatment and record purposes</label>
+                </div>
+            </div>
+            <button type="submit" value="Register">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="./login.html">Sign in here</a></p>
+    </div>
+</body>
+</html>

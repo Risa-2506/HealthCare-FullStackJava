@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Home page
+    </title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        HealthCare+
+      </div>
+      <div class="middle-section">
+        <a href="index.html" class="Home">
+          Home
+        </a>
+        <a href="about_page.html" class="About">
+          About
+        </a>
+        <a href="service.html" class="Services">
+          Services
+        </a>
+        <a href="doctor.html" class="Doctors">
+          Doctors
+        </a>
+        <a href="appointment.html" class="Appointment">
+          Appointment
+        </a>
+        <a href="contact_page.html" class="Contact">
+          Contact
+        </a>
+      </div>
+      <div class="right-section">
+        <a href="login.html" class="login">
+          Login
+        </a>
+        <a href="register.html" class="register">
+          Register
+        </a>
+        <div class="hamburger">
+          <img src="images/hamburger-menu.png" class="hamburger-img">
+        </div>
+        <div class="dropdown-link">
+          <div class="links">
+            <a href="index.html" class="index-drop">Home</a>
+            <a href="about_page.html" class="about-drop">About us</a>
+            <a href="service.html"class="service-drop">Services</a>
+            <a href="doctor.html" class="doctor-drop">Doctor</a>
+            <a href="appointment.html"class="appointment-drop">Appointment</a>
+            <a href="contact_page.html" class="contact-drop">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="info">
+        <div class="info-details">
+          <p class="title1">Comprehensive</p>
+          <p class="title2">Healthcare Services</p>
+          <p class="details">Experience world-class medical care with our team of expert doctors, state-of-the-art facilities, and patient-centered approach to healthcare.</p>
+          <button class="app-btn" onclick="window.location.href='appointment.html'">Book Appointment</button>
+          <button class="contact-btn" onclick="window.location.href='contact_page.html'">Contact Us</button>
+        </div>
+        <div class="info-img">
+          <img src="images/healthcare.jpg" class="image">
+        </div>
+      </div>
+      <section class="why-choose">
+        <h2>Why Choose <span>HealthCare+</span>?</h2>
+        <p class="subtitle">
+          We provide exceptional healthcare services with a focus on patient satisfaction and clinical excellence.
+        </p>
+
+        <div class="cards">
+  <div class="card">
+    <div class="icon blue">
+      <img src="images/doctor.png" alt="Doctor Icon">
+    </div>
+    <h3>Expert Doctors</h3>
+    <p>Our team of experienced and certified medical professionals provides world-class care.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon green">
+      <img src="images/technology.png" alt="Technology Icon">
+    </div>
+    <h3>Advanced Technology</h3>
+    <p>State-of-the-art medical equipment and cutting-edge technology for accurate diagnosis.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon purple">
+      <img src="images/emergency.png" alt="Emergency Icon">
+    </div>
+    <h3>24/7 Emergency</h3>
+    <p>Round-the-clock emergency services with immediate response and critical care.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon orange">
+      <img src="images/quality.png" alt="Quality Icon">
+    </div>
+    <h3>Quality Care</h3>
+    <p>Accredited facility with international standards and a patient-centered approach.</p>
+  </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section class="services">
+  <h2>Our Medical Services</h2>
+  <p class="subtitle">Comprehensive healthcare services designed to meet all your medical needs under one roof.</p>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/cardiology.png" alt="Cardiology Icon">
+      </div>
+      <h3>Cardiology</h3>
+      <p>Heart and cardiovascular care</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/neurology.png" alt="Neurology Icon">
+      </div>
+      <h3>Neurology</h3>
+      <p>Brain and nervous system</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/orthopedics.png" alt="Orthopedics Icon">
+      </div>
+      <h3>Orthopedics</h3>
+      <p>Bone and joint specialists</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/pediatrics.png" alt="Pediatrics Icon">
+      </div>
+      <h3>Pediatrics</h3>
+      <p>Specialized care for children</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/surgery.png" alt="Surgery Icon">
+      </div>
+      <h3>General Surgery</h3>
+      <p>Surgical procedures and operations</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/emergency.png" alt="Emergency Icon">
+      </div>
+      <h3>Emergency Care</h3>
+      <p>24/7 emergency medical services</p>
+    </div>
+
+  	</div>
+      </section>
+    </div>
+    
+    <script>
+      // Get current file name (e.g. "about_page.html")
+      const currentPage = window.location.pathname.split("/").pop();
+
+      // Get all nav links
+      const links = document.querySelectorAll(".links a");
+
+      // Loop through and add 'active' to the matching one
+      links.forEach(link => 
+      {
+        if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+        }
+      });
+      hamburger=document.querySelector('.hamburger-img');
+      dropdown=document.querySelector('.links');
+      dropdown2=document.querySelector('.dropdown-link');
+      hamburger.addEventListener('click',() =>
+      {
+        dropdown.classList.toggle('show');
+        dropdown2.classList.toggle('show'); /* classList is a built in function..it has properties like add remove a class..toggle*/
+      });
+      
+    </script>
+  </body>
+</html>

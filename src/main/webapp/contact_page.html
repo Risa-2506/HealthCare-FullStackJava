@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/contact_page1.css">
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="styles/contact_page1.css">
+    </head>
+
+    <body>
+        <div class="header">
+      <div class="left-section">
+        HealthCare+
+      </div>
+      <div class="middle-section">
+        <a href="index.html" class="Home">
+          Home
+        </a>
+        <a href="about_page.html" class="About">
+          About
+        </a>
+        <a href="service.html" class="Services">
+          Services
+        </a>
+        <a href="doctor.html" class="Doctors">
+          Doctors
+        </a>
+        <a href="appointment.html" class="Appointment">
+          Appointment
+        </a>
+        <a href="contact_page.html" class="Contact">
+          Contact
+        </a>
+      </div>
+      <div class="right-section">
+        <a href="login.html" class="login">
+          Login
+        </a>
+        <a href="register.html" class="register">
+          Register
+        </a>
+        <div class="hamburger">
+          <img src="images/hamburger-menu.png" class="hamburger-img">
+        </div>
+        <div class="dropdown-link">
+          <div class="links">
+            <a href="index.html" class="index-drop">Home</a>
+            <a href="about_page.html" class="about-drop">About us</a>
+            <a href="service.html"class="service-drop">Services</a>
+            <a href="doctor.html" class="doctor-drop">Doctor</a>
+            <a href="appointment.html"class="appointment-drop">Appointment</a>
+            <a href="contact_page.html" class="contact-drop">Contact</a>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="container">
+
+            <div class="contact-form">
+                <h2>📩 Send us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible</p>
+
+                <form action="ContactServlet" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" name="full_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email_address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone_number">
+                        </div>
+                        <div class="form-group">
+                            <label>Department</label>
+                            <select name="department" required>
+                                <option>Select Department</option>
+                                <option>General Inquiry</option>
+                                <option>Appointments</option>
+                                <option>Billing</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" name="subject" placeholder="Brief subject of your inquiry">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea name="message" placeholder="Please describe your inquiry in detail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="send-btn">
+                        ✈ Send Message
+                    </button>
+                </form>
+            </div>
+
+
+            <div class="info-section">
+
+                <div class="info-box">
+                    <h3>📞 Quick Contact</h3>
+                    <p><strong>Main Line:</strong> (555) 123-4567</p>
+                    <p><strong>Emergency:</strong> <span class="emergency">911</span></p>
+                    <button class="call-btn">📱 Call Now</button>
+                </div>
+
+
+                <div class="info-box">
+                    <h3>🕒 Hours of Operation</h3>
+                    <ul>
+                        <li><strong>Monday - Friday:</strong> 6:00 AM - 8:00 PM</li>
+                        <li><strong>Saturday:</strong> 8:00 AM - 6:00 PM</li>
+                        <li><strong>Sunday:</strong> 10:00 AM - 4:00 PM</li>
+                        <li><strong>Emergency Services:</strong> <span class="emergency">24/7</span></li>
+                    </ul>
+                </div>
+
+
+                <div class="info-box emergency-box">
+                    <h3>🚑 Emergency Care</h3>
+                    <p>For life-threatening emergencies, call 911 immediately or visit our emergency department.</p>
+                    <button class="emergency-btn">Emergency Services</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    </html>
+
+    <div class="contact">
+        <div>
+            <div class="para">Contact Information</div>
+            <p class="below_line">Multiple ways to reach us</p>
+        </div>
+        <div id="level2_boxes">
+            <div class="box" id="box1">
+                <div class="photo"></div>
+                <h2>Phone Numbers</h2>
+
+                <h3>Main Hospital</h1>
+                    <p>(555) 123-4567</p>
+                    <h3>Emergency</h1>
+                        <p>911</p>
+                        <h3>Patient Services</h1>
+                            <p>(555) 123-4568</p>
+                            <h3>Appointments</h1>
+                                <p>(555) 123-4569</p>
+            </div>
+            <div class="box" id="box1">
+                <div class="photo"></div>
+                <h2>Email Addresses</h2>
+
+                <h3>General Info</h1>
+                    <p>info@healthcare.com</p>
+                    <h3>Appointments</h1>
+                        <p>appointments@healthcare.com</p>
+                        <h3>Patient Services</h1>
+                            <p>patients@healthcare.com</p>
+                            <h3>Administration</h1>
+                                <p>admin@healthcare.com</p>
+            </div>
+            <div class="box" id="box1">
+                <div class="photo"></div>
+                <h2>Locations</h2>
+
+                <h3>Main Hospital</h1>
+                    <p>123 Healthcare Ave, Medical City, MC 12345</p>
+                    <h3>Outpatient Clinic</h3>
+                    <p>456 Wellness Blvd, Medical City, MC 12346</p>
+                    <h3>Emergency Center</h3>
+                    <p>789 Emergency Dr, Medical City, MC 12347</p>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div class="para">Frequently Asked Questions</div>
+            <p class="below_line">Quick question And Answers</p>
+        </div>
+        <div class="question_container">
+            <div class="question_box" id="box21">
+                <h3>What insurance plans do you accept?</h3>
+                <p>We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna,
+                    UnitedHealthcare, Medicare, and Medicaid.</p>
+            </div>
+            <div class="question_box" id="box22">
+                <h3>How do I schedule an appointment?</h3>
+                <p>You can schedule an appointment online through our patient portal, by calling our appointment line at
+                    (555) 123-4569, or by visiting us in person.</p>
+            </div>
+            <div class="question_box" id="box23">
+                <h3>What should I bring to my appointment?</h3>
+                <p>Please bring your insurance card, valid ID, list of current medications, and any relevant medical
+                    records or test results.</p>
+            </div>
+            <div class="question_box" id="box24">
+                <h3>Do you offer emergency services?</h3>
+                <p>Yes, we have a 24/7 emergency department staffed with board-certified emergency physicians and
+                    equipped to handle all types of medical emergencies.</p>
+            </div>
+            <div class="question_box" id="box25">
+                <h3>How can I access my medical records?</h3>
+                <p>You can access your medical records through our secure patient portal online, or request copies by
+                    contacting our medical records department.</p>
+            </div>
+            <div class="question_box" id="box26">
+                <h3>What are your visiting hours?</h3>
+                <p>General visiting hours are 8:00 AM to 8:00 PM daily. ICU and special units may have different hours.
+                    Please check with the specific department.</p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+      // Get current file name (e.g. "about_page.html")
+      const currentPage = window.location.pathname.split("/").pop();
+
+      // Get all nav links
+      const links = document.querySelectorAll(".links a");
+
+      // Loop through and add 'active' to the matching one
+      links.forEach(link => 
+      {
+        if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+        }
+      });
+      hamburger=document.querySelector('.hamburger-img');
+      dropdown=document.querySelector('.links');
+      dropdown2=document.querySelector('.dropdown-link');
+      hamburger.addEventListener('click',() =>
+      {
+        dropdown.classList.toggle('show');
+        dropdown2.classList.toggle('show'); /* classList is a built in function..it has properties like add remove a class..toggle*/
+      });
+
+    </script>
+</body>
+
+</html>

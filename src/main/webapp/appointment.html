@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Hospital Website</title>
+  <link rel="stylesheet" href="styles/doctor.css">
+  <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+  <div class="header">
+      <div class="left-section">
+        HealthCare+
+      </div>
+      <div class="middle-section">
+        <a href="index.html" class="Home">
+          Home
+        </a>
+        <a href="about_page.html" class="About">
+          About
+        </a>
+        <a href="service.html" class="Services">
+          Services
+        </a>
+        <a href="doctor.html" class="Doctors">
+          Doctors
+        </a>
+        <a href="appointment.html" class="Appointment">
+          Appointment
+        </a>
+        <a href="contact_page.html" class="Contact">
+          Contact
+        </a>
+      </div>
+      <div class="right-section">
+        <a href="login.html" class="login">
+          Login
+        </a>
+        <a href="register.html" class="register">
+          Register
+        </a>
+        <div class="hamburger">
+          <img src="images/hamburger-menu.png" class="hamburger-img">
+        </div>
+        <div class="dropdown-link">
+          <div class="links">
+            <a href="index.html" class="index-drop">Home</a>
+            <a href="about_page.html" class="about-drop">About us</a>
+            <a href="service.html"class="service-drop">Services</a>
+            <a href="doctor.html" class="doctor-drop">Doctor</a>
+            <a href="appointment.html"class="appointment-drop">Appointment</a>
+            <a href="contact_page.html" class="contact-drop">Contact</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <section class="appointment-page">
+    <h2>BOOK AN APPOINTMENT</h2>
+
+    <form id="appointmentForm" action="BookAppointmentServlet" method="post" class="appointment-form">
+      <label>Name:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label>Select Doctor:</label>
+      <select name="doctor_name" id="doctor" required>
+        <option value="Dr. Meera Sharma">Dr. Meera Sharma</option>
+        <option value="Dr. Rajesh Kumar">Dr. Rajesh Kumar</option>
+        <option value="Dr. Ananya Desai">Dr. Ananya Desai</option>
+        <option value="Dr. Karan Patel">Dr. Karan Patel</option>
+        <option value="Dr. Sneha Reddy">Dr. Sneha Reddy</option>
+        <option value="Dr. Anil Verma">Dr. Anil Verma</option>
+        
+      </select>
+
+      <label>Date:</label>
+      <input type="date" name="appointment_date" id="date" required>
+
+      <label>Time:</label>
+      <input type="time" name="appointment_time" id="time" required>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </section>
+
+   <script>
+      // Get current file name (e.g. "about_page.html")
+      const currentPage = window.location.pathname.split("/").pop();
+
+      // Get all nav links
+      const links = document.querySelectorAll(".links a");
+
+      // Loop through and add 'active' to the matching one
+      links.forEach(link => 
+      {
+        if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+        }
+      });
+      hamburger=document.querySelector('.hamburger-img');
+      dropdown=document.querySelector('.links');
+      dropdown2=document.querySelector('.dropdown-link');
+      hamburger.addEventListener('click',() =>
+      {
+        dropdown.classList.toggle('show');
+        dropdown2.classList.toggle('show'); /* classList is a built in function..it has properties like add remove a class..toggle*/
+      });
+
+  </script>
+</body>
+</html>

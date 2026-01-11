@@ -1,0 +1,172 @@
+p, h2, h3, h1 {
+    margin: 0;
+    padding: 0;
+}
+h3
+{
+    margin-left: 15px;
+}
+#main-header {
+
+    display: flex;
+
+}
+
+#healthverse {
+    display: block;
+    padding-left: 60px;
+    padding-right: 170px;
+}
+
+#header-button {
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    padding: 10px;
+}
+
+.description,
+.foundation {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+}
+.story_description{
+    max-width: 50vb;
+}
+#story_photo {
+    min-width: 600px;
+    min-height: 400px;
+    background-color: rgb(4, 2, 23);
+}
+
+#level3_boxes,
+.level4_boxes,
+.level5_boxes,
+.level6_boxes {
+    padding-top: 0px;
+
+    display: flex;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.level5_boxes
+{
+    margin-bottom: 35px;
+}
+.level6_boxes{
+
+    padding-bottom: 30px;
+}
+.Foundation {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    padding-top: 30px;
+    width: 400px;
+    height: auto;
+    margin: 20px;
+border-radius: 30px;
+
+}
+
+.box2,
+.box3 {
+    padding-top: 30px;
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 30px;
+}
+
+#box1,#box2_1,
+#box3_1,
+#box2,
+#box2_2,
+#box3_2 ,#box3,
+#box2_3,
+#box3_3,#box2_4,
+#box3_4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.level6{
+    background-color: rgb(1, 2, 25);
+}
+
+.para{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+   
+}
+p{
+    font-size: large;
+    line-height: 1.6;
+display: flex;
+justify-content: center;
+color: #5f5e5e; 
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.first_line{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.box4{
+    color: white;
+}
+#last_block{
+    color: white;
+    font-size: 50px;
+}
+.image{
+  width: 100%;        
+    height: 100%;       
+    object-fit: cover; 
+}
+.photo,.photo_2,.photo_3{
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/healtg_logo.jpg'); 
+    background-size: cover;   
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.photo_2{
+    background-image: url(../images/medical_logo.jpg);
+}
+#item1{
+    background-image: url(../images/certified.jpg);
+}
+#item2{
+    background-image: url(../images/rating.png);
+}
+#item3{
+    background-image: url(../images/human.jpg);
+}
+#item4{
+    background-image: url(../images/locations.jpg);
+}

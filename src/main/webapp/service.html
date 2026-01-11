@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | HealthCare</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/service.css">
+</head>
+<body>
+  <div class="header">
+      <div class="left-section">
+        HealthCare+
+      </div>
+      <div class="middle-section">
+        <a href="index.html" class="Home">
+          Home
+        </a>
+        <a href="about_page.html" class="About">
+          About
+        </a>
+        <a href="service.html" class="Services">
+          Services
+        </a>
+        <a href="doctor.html" class="Doctors">
+          Doctors
+        </a>
+        <a href="appointment.html" class="Appointment">
+          Appointment
+        </a>
+        <a href="contact_page.html" class="Contact">
+          Contact
+        </a>
+      </div>
+      <div class="right-section">
+        <a href="login.html" class="login">
+          Login
+        </a>
+        <a href="register.html" class="register">
+          Register
+        </a>
+        <div class="hamburger">
+          <img src="images/hamburger-menu.png" class="hamburger-img">
+        </div>
+        <div class="dropdown-link">
+          <div class="links">
+            <a href="index.html" class="index-drop">Home</a>
+            <a href="about_page.html" class="about-drop">About us</a>
+            <a href="service.html"class="service-drop">Services</a>
+            <a href="doctor.html" class="doctor-drop">Doctor</a>
+            <a href="appointment.html"class="appointment-drop">Appointment</a>
+            <a href="contact_page.html" class="contact-drop">Contact</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- 🌟 Hero Section -->
+  <section class="services-hero">
+    <h1>Our Healthcare Services</h1>
+    <p>Comprehensive care for your health and well-being.</p>
+    <a href="appointment.html" class="hero-btn">Book Appointment</a>
+  </section>
+
+  <!-- 🏥 Services Grid -->
+  <section class="services-section">
+    <h2>What We Offer</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <img src="images/i1.jpg" alt="Cardiology">
+        <h3>Cardiology</h3>
+        <p>Heart check-ups, ECG, and cardiac consultations.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/i2.jpg" alt="Neurology">
+        <h3>Neurology</h3>
+        <p>Brain and nervous system diagnosis and treatment.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/i3.webp" alt="Dental Care">
+        <h3>Dental Care</h3>
+        <p>Regular checkups, cleaning, and cosmetic dentistry.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/i4.jpg" alt="Gynecology">
+        <h3>Gynecology</h3>
+        <p>Women’s health, pregnancy care, and counseling.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/i5.webp" alt="Pathology">
+        <h3>Pathology</h3>
+        <p>Blood tests, diagnostic reports, and lab services.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/i6.jpg" alt="Orthopedics">
+        <h3>Orthopedics</h3>
+        <p>Bone, muscle, and joint treatments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌿 Why Choose Us -->
+  <section class="why-choose">
+    <h2>Why Choose Us?</h2>
+    <div class="why-container">
+      <div class="why-item">🏥 24/7 Emergency Support</div>
+      <div class="why-item">👩‍⚕️ Experienced Specialists</div>
+      <div class="why-item">🧫 Advanced Diagnostic Labs</div>
+      <div class="why-item">💸 Affordable & Transparent Pricing</div>
+    </div>
+  </section>
+
+  <!-- 📅 Appointment CTA -->
+  <section class="cta-section">
+    <h2>Ready to Take Charge of Your Health?</h2>
+    <a href="appointment.html" class="cta-btn">Book Your Appointment</a>
+  </section>
+
+  <!-- 📞 Contact -->
+  <script>
+      // Get current file name (e.g. "about_page.html")
+      const currentPage = window.location.pathname.split("/").pop();
+
+      // Get all nav links
+      const links = document.querySelectorAll(".links a");
+
+      // Loop through and add 'active' to the matching one
+      links.forEach(link => 
+      {
+        if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+        }
+      });
+      hamburger=document.querySelector('.hamburger-img');
+      dropdown=document.querySelector('.links');
+      dropdown2=document.querySelector('.dropdown-link');
+      hamburger.addEventListener('click',() =>
+      {
+        dropdown.classList.toggle('show');
+        dropdown2.classList.toggle('show'); /* classList is a built in function..it has properties like add remove a class..toggle*/
+      });
+
+  </script>
+</body>
+</html>
